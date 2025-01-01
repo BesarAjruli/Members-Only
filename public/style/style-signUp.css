@@ -1,0 +1,75 @@
+html,body{margin: 0;}
+
+body{
+    background-color: #f3f2f2;
+}
+body>div {
+    display: flex;
+    flex: 1;
+}
+.background-img{
+    height: 100vh;
+    overflow: hidden;
+    width: 40%;
+    position: relative;
+}
+.background-img+div{
+    width: 70%;
+}
+.background-img>img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -150px;
+}
+form{
+    padding: 10px 30px;
+    background-color: white;
+    box-shadow: 1px 5px 15px -10px #5a5a5a;
+}
+form h2{
+    margin-top: 10px;
+}
+form>div{
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    column-gap: 50px;
+}
+form>div div{
+    display: flex;
+    flex-direction: column;
+}
+form>div>div input{
+    width: 250px;
+    height: 25px;
+    font-size: 16px;
+    padding: 0 15px;
+    margin: 0 0 25px 0;
+}
+input:focus{
+    outline-color: rgb(57, 57, 233);
+    outline-width: 0.1px;
+    box-shadow:1px 5px 15px -10px #5a5a5a;
+}
+.textContent{
+    padding: 20px 175px 20px 75px;
+}
+.textContent p {
+    font-size: 22px;
+    font-weight: 800;
+}
+.buttonContainer{
+    padding: 30px 75px;
+}
+.buttonContainer>button {
+    height: 40px;
+    width: 200px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #596D48;
+    color: #fff;
+}
+.loginText{
+    color: #596D48;
+    font-weight: 800;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/style/style-signUp.css">
+</head>
+<body>
+    <div>
+        <div class="background-img">
+            <img src="/images/bgImg.jpg" alt="backgroundImg" id="backgroundImg">
+        <div class="logoContainer"><img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="logo" id="logo"></div>
+        </div>
+
+        <div>
+            <div class="textContent">
+                <p>Login to our members club! You know you need something like this in your life to help you realize your deepest dreams. Login <i>now</i> to join us.</p>
+                <h2>You know you want to.</h2>
+            </div>
+            <form action="/login" method="post" id="userInput">
+                <h2>Let's do this</h2>
+                <div style="margin-top: 90px;grid-template: repeat(2, 1fr) / repeat(2, 1fr)">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                </div>
+            </form>
+            <div class="buttonContainer">
+                <button type="submit" form="userInput">Log In</button>
+                <p>Don't have an account? <a href="/sign-up"><span class="loginText">Sign Up</span></a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

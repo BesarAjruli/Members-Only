@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+
+    <link rel="stylesheet" href="/style/mainStyle.css">
+</head>
+<body>
+    <% if (locals.user) {%>
+        <form action="/new" method="post" class="new">
+            <div>
+                <label for="msg">New Messgae:</label>
+                <input type="text" name="msg" id="msg">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    <%}%>
+    <% messages.forEach(message => { %>
+    <div class="messageContainer">
+        <div class="msgContent">
+            <% if (locals.user.membership === true) {%>
+                <h4><%= message.author %></h4>
+            <% } %>
+            <p><%= message.message %></p>
+            <% if (locals.user.membership === true) {%>
+                <p style="font-weight: 300; font-size: 14px;"><%= message.date %></p>
+            <% } %>
+        </div>
+        <% if (locals.user.model === 'admin') {%>
+        <div class="deleteIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" onclick="del('<%= message.id %>')"><title>delete-outline</title><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" /></svg>
+        </div>
+        <% } %>
+    </div>
+    <% }) %>
+    <script>
+        function del(id){
+            location.href = `/delete/${id}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="/style/style-signUp.css">
+</head>
+<body>
+    <div>
+        <div class="background-img">
+            <img src="/images/bgImg.jpg" alt="backgroundImg" id="backgroundImg">
+        <div class="logoContainer"><img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="logo" id="logo"></div>
+        </div>
+
+        <div>
+            <div class="textContent">
+                <p>Sign up to our members club! You know you need something like this in your life to help you realize your deepest dreams. Sign up <i>now</i> to join us.</p>
+                <h2>You know you want to.</h2>
+            </div>
+            <form action="/sign-up" method="post" id="userInput">
+                <h2>Let's do this</h2>
+                <div>
+                    <div>
+                        <label for="firstName">First Name*</label>
+                        <input type="text" id="firstName" name="firstName" value="<%= formData.firstName || '' %>" required></div>
+                    <div>
+                        <label for="lastName">Last Name*</label>
+                        <input type="text" id="lastName" name="lastName" value="<%= formData.lastName|| '' %>" required></div>
+                    <div>
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" value="<%= formData.email || '' %>" required>
+                    </div>
+                    <div>
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="number" id="phoneNumber" name="phoneNumber" value="<%= formData.phoneNumber || '' %>">
+                    </div>
+                    <div>
+                        <label for="password">Password*</label>
+                        <input type="password" id="password" name="password" value="<%= formData.password || '' %>" required>
+                    </div>
+                    <div>
+                        <label for="confirmPass">Confirm Password*</label>
+                        <input type="password" id="confirmPass" name="confirmPass" value="<%= formData.confirmPass || '' %>" required>
+                    </div>
+                </div>
+                <% if (errors && errors.length > 0) { %>
+                    <ul style="color: red;">
+                      <% errors.forEach(error => { %>
+                        <li><%= error.msg %></li>
+                      <% }) %>
+                    </ul>
+                  <% } %>
+            </form>
+            <div class="buttonContainer">
+                <button type="submit" form="userInput">Create Account</button>
+                <p>Already have an account? <a href="/login"><span class="loginText">Log In</span></a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+.new{
+    display: flex;
+    background-color: #f3f2f2;
+    color: #596D48;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    place-items: center;
+    padding: 20px 0;
+}
+.new button{
+    height: 35px;
+    width: 150px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #596D48;
+    color: #fff;
+}
+.new input{
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+    padding: 0 15px;
+    margin: 0 0 25px 0;
+    border-radius: 10px;
+    border: 1px solid #596D48;
+    margin: 0 50px;
+}
+input:focus{
+    outline-color:  #596D48;
+    outline-width: 0.1px;
+    box-shadow:1px 5px 15px -10px #5a5a5a;
+}
+
+.messageContainer{
+    padding: 10px 30px;
+    background-color: #f3f2f2;
+    box-shadow: 1px 5px 15px -10px #5a5a5a;
+    margin: 30px;
+    border-radius: 10px;
+    color: #596D48;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+.deleteIcon{
+width: 40px;
+height: 40px;
+}
+.deleteIcon svg{
+    fill: #596D48;
+}
+.msgContent{
+    width: 100%;
+}

@@ -1,0 +1,53 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Container for centering button */
+.container {
+    background-image: url('/images/bgImage2.jpg'); /* Leaf background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 90%;
+    padding: 150px;
+    border: 0;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px rgba(121, 116, 66, 0.8);
+}
+
+/* Styling the Button */
+.center-button {
+    background-color: rgba(121, 116, 66, 0.8); /* Green color */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.center-button:hover {
+    background-color: rgba(0, 128, 0, 1); /* Darker green on hover */
+}
+
+.center-button:focus {
+    outline: none;
+}
