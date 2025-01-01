@@ -16,19 +16,21 @@
                 <button type="submit">Submit</button>
             </div>
         </form>
-    <%}%>
+    <%} else {%>
+        <div class="loginContainer"><button onclick="signup()">Sign Up</button></div>
+        <%}%>
     <% messages.forEach(message => { %>
     <div class="messageContainer">
         <div class="msgContent">
-            <% if (locals.user.membership === true) {%>
+            <% if (locals.user && locals.user.membership === true) {%>
                 <h4><%= message.author %></h4>
             <% } %>
             <p><%= message.message %></p>
-            <% if (locals.user.membership === true) {%>
+            <% if (locals.user && locals.user.membership === true) {%>
                 <p style="font-weight: 300; font-size: 14px;"><%= message.date %></p>
             <% } %>
         </div>
-        <% if (locals.user.model === 'admin') {%>
+        <% if (locals.user && locals.user.model === 'admin') {%>
         <div class="deleteIcon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" onclick="del('<%= message.id %>')"><title>delete-outline</title><path d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z" /></svg>
         </div>
@@ -38,6 +40,9 @@
     <script>
         function del(id){
             location.href = `/delete/${id}`
+        }
+        function signup(){
+            location.href = '/sign-up'
         }
     </script>
 </body>
