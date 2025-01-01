@@ -58,3 +58,22 @@ height: 40px;
 .msgContent{
     width: 100%;
 }
+.loginContainer{
+    display: flex;
+    background-color: #f3f2f2;
+    color: #596D48;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    place-items: center;
+    padding: 20px 0;
+}
+.loginContainer button{
+    height: 35px;
+    width: 150px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #596D48;
+    color: #fff;
+}
